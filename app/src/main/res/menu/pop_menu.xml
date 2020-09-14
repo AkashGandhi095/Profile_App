@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/looking_action"
+        android:title="Looking For"
+        android:icon="@drawable/looking_for"/>
+    <item android:id="@+id/offer_action"
+        android:title="Offerings"
+        android:icon="@drawable/conn_people"/>
+
+    <item android:id="@+id/recommend_action"
+        android:title="Recommendation"
+        android:icon="@drawable/mention"/>
+
+
+</menu>
