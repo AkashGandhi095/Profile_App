@@ -8,6 +8,7 @@ public class RetrofitConnect {
     private static ApiService service;
     private static final String BASE_URL = "https://jsonplaceholder.typicode.com/";
 
+    // retrofit get Service class
     public static ApiService getService()
     {
         if (service == null)
