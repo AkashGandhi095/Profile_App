@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         shareImg = findViewById(R.id.share_img);
         toolText.setText(title);
 
+        Toast.makeText(this, "Addind toast", Toast.LENGTH_SHORT).show();
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
         NavController navController = Navigation.findNavController(this ,R.id.fragment_host);
         NavigationUI.setupWithNavController(bottomNavigationView , navController);
@@ -82,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
                 toolText.setText(title);
 
             }
+
         });
 
 
