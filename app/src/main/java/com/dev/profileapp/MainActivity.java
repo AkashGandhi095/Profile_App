@@ -63,26 +63,22 @@ public class MainActivity extends AppCompatActivity {
         ImageView imageView = findViewById(R.id.add_img);
 
         // this called when fragment changes in bottom navigation
-        navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
-            @Override
-            public void onDestinationChanged(@NonNull NavController controller, @NonNull NavDestination destination, @Nullable Bundle arguments) {
-                if (destination.getId() == R.id.postFragment)
-                {
-                    title = "Posts";
-                    settingImg.setVisibility(View.GONE);
-                    addIconImage.setVisibility(View.GONE);
-                    shareImg.setVisibility(View.GONE);
-                }
-                else if (destination.getId() == R.id.profileFragment)
-                {
-                    title = "Profile";
-                    settingImg.setVisibility(View.VISIBLE);
-                    addIconImage.setVisibility(View.VISIBLE);
-                    shareImg.setVisibility(View.VISIBLE);
-                }
-                toolText.setText(title);
-
+        navController.addOnDestinationChangedListener((controller, destination, arguments) -> {
+            if (destination.getId() == R.id.postFragment)
+            {
+                title = "Posts";
+                settingImg.setVisibility(View.GONE);
+                addIconImage.setVisibility(View.GONE);
+                shareImg.setVisibility(View.GONE);
             }
+            else if (destination.getId() == R.id.profileFragment)
+            {
+                title = "Profile";
+                settingImg.setVisibility(View.VISIBLE);
+                addIconImage.setVisibility(View.VISIBLE);
+                shareImg.setVisibility(View.VISIBLE);
+            }
+            toolText.setText(title);
 
         });
 
